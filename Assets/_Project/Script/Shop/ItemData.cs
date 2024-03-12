@@ -5,7 +5,7 @@ namespace Assets._Project.Script.Shop
 {[CreateAssetMenu(fileName ="ImageData", menuName = "ImageData", order = 51)]
     public class ItemData : ScriptableObject
     {
-        public Sprite[] _sprites;
+        [SerializeField] private Sprite[] _sprites;
 
         public Sprite GetSprite()
         {
