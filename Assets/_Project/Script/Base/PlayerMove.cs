@@ -7,21 +7,23 @@ public class PlayerMove : MonoBehaviour
 {
     private Animator animator;
 
-    private void Awake()
-    {
+    private Vector2 inputDirection;
+
+    private const string HorizontalAxisName = "Horizontal";
+
+    private const string VerticallAxisName = "Vertical";
+
+    private const string MoveForvard = "MoveValue";
+
+
+    private void Awake() {
         animator = GetComponent<Animator>();
     }
 
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            animator.SetBool("Run",true);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            animator.SetBool("Run", false);
-        }
+    private void Update() {
+        inputDirection = new Vector2(Input.GetAxis(HorizontalAxisName),  Input.GetAxis(VerticallAxisName));
+
+        animator.SetFloat(MoveForvard, inputDirection.y);
     }
 }
