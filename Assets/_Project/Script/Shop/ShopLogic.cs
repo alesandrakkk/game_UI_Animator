@@ -20,10 +20,7 @@ namespace Assets._Project.Script.Shop
 
         private BuyButton _buyButton;
 
-        
-
-
-        
+             
 
         internal void InitShop(ShopItem shopItemPrefab, RectTransform layout)
         {
