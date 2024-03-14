@@ -716,6 +716,7 @@ GameObject:
   - component: {fileID: 481645471}
   - component: {fileID: 481645470}
   - component: {fileID: 481645473}
+  - component: {fileID: 481645474}
   m_Layer: 5
   m_Name: Shop Canvas
   m_TagString: Untagged
@@ -820,12 +821,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe2a4449204b8c47a3b27aae6cef87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animationDuration: 0.2
   _backButton: {fileID: 214627774}
   mainMenu: {fileID: 1754329877}
   _myMoneyUI: {fileID: 1458873049}
   _shopItemPrefab: {fileID: 8496085379409438538, guid: 214e29eff27c55c4f9999e7f938a27f3, type: 3}
   _icon: {fileID: 11400000, guid: f393f9323c1c3f848bed856520103106, type: 2}
   _layout: {fileID: 2051450320}
+--- !u!225 &481645474
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481645468}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &484611641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +1990,7 @@ GameObject:
   - component: {fileID: 1754329873}
   - component: {fileID: 1754329877}
   - component: {fileID: 1754329876}
+  - component: {fileID: 1754329878}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2078,7 +2093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuScreen: {fileID: 1754329877}
-  gameScreen: {fileID: 0}
   shopScreen: {fileID: 481645473}
 --- !u!114 &1754329877
 MonoBehaviour:
@@ -2092,9 +2106,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae62af3efb232dd4889b1eaff5968fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animationDuration: 0.2
   _gameButton: {fileID: 572404356}
   _optionsButton: {fileID: 1321653605}
   _shopButton: {fileID: 1013493436}
+--- !u!225 &1754329878
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754329871}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1859538705
 GameObject:
   m_ObjectHideFlags: 0

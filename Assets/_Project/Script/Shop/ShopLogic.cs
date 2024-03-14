@@ -3,16 +3,19 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Assets._Project.Script.Shop
 {
     public class ShopLogic 
     {
+        private TextMeshProUGUI _myMoneyUI;
 
         private int _myMoney = 1000;
         public int Money { get => _myMoney; set => _myMoney = value; }
 
         private ShopItem _item;
+                
         private List<ShopItem> items = new();
         private int shopItemCount = 20;
 
@@ -28,23 +31,24 @@ namespace Assets._Project.Script.Shop
             {
                 var item = GameObject.Instantiate(shopItemPrefab, layout);
 
-                items.Add(item);
                 item.image.sprite = scriptObj.GetSprite();
+                BuyAccess(item);
+                items.Add(item);
             }
 
-            BuyAccess();
         }
 
 
 
-        private void BuyAccess()
+        private void BuyAccess( ShopItem item)
         {
-            if (_myMoney < _item.Price)
+            if (Money < item.Price)
             {
                 _buyButton.enabled = false;
             }
             else
             {
+               
                 BuyItem();
             }
         }
@@ -53,10 +57,14 @@ namespace Assets._Project.Script.Shop
         {
             for (int i = 0; i < items.Count; i++)
             {
-                if (items[i].Price <= _myMoney)
+                if (items[i].Price <= Money)
                 {
-                    _myMoney -= items[i].Price;
+                   Money -= items[i].Price;
+
+                   
                 }
+
+               
             }
         }
     }

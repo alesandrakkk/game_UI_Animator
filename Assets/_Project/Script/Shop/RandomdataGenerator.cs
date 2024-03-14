@@ -17,7 +17,7 @@ namespace Assets._Project.Script.Shop
 
         public static string GetName()
         {
-            return subName[Random.Range(0, names.Length)] + " " + names[Random.Range(0, names.Length)];
+            return subName[Random.Range(0, names.Length -1)] + " " + names[Random.Range(0, names.Length -1)];
         }
     }
 

@@ -20,4 +20,10 @@ public class MainMenuHendler : MonoBehaviour
             shopScreen.StartScreen();
         });
     }
+
+
+    public void BackToMenu()
+    {
+
+    }
 }
