@@ -7,6 +7,9 @@ public class ErikaMoveController : MonoBehaviour
 {
     private Animator animator;
 
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private ParticleSystem _dust;
+
     private Vector2 _direction;
 
     private const string HorizontalAxis = "Horizontal";
@@ -32,6 +35,17 @@ public class ErikaMoveController : MonoBehaviour
         {
             animator.SetBool(Celebrate, true);
         }
-        
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            animator.SetBool(Celebrate, false);
+        }
+                
+    }
+
+    private void PlaySoundAndDust()
+    {
+        Debug.Log("Go");
+
+        _dust.Play();
     }
 }
