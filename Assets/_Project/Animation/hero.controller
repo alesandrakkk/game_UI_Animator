@@ -35,8 +35,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Move Value
-    m_EventTreshold: 0.5
+    m_ConditionEvent: MoveValue
+    m_EventTreshold: 0.8
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 597465381289473516}
   m_Solo: 0
@@ -120,7 +120,7 @@ AnimatorController:
   m_Name: hero
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Move Value
+  - m_Name: MoveValue
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -209,8 +209,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Move Value
-    m_EventTreshold: 0.48
+    m_ConditionEvent: MoveValue
+    m_EventTreshold: 0.7
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 175030432914239509}
   m_Solo: 0
@@ -234,8 +234,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Move Value
-    m_EventTreshold: 0.2
+    m_ConditionEvent: MoveValue
+    m_EventTreshold: 0.3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 175030432914239509}
   m_Solo: 0
@@ -286,8 +286,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Move Value
-    m_EventTreshold: 0.98
+    m_ConditionEvent: MoveValue
+    m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6093427778606659769}
   m_Solo: 0

@@ -14,8 +14,8 @@ public abstract class AbstButton : MonoBehaviour, IPointerDownHandler, IPointerU
     private Vector2 startScale;
     public float animationModificator = 1.1f;
 
-    void OnEnable()
-    {
+    void OnEnable() {
+
         targetGraphic = GetComponent<Image>();
 
         startScale = transform.localScale;

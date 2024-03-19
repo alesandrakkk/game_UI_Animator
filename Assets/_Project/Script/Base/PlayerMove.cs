@@ -22,6 +22,7 @@ public class PlayerMove : MonoBehaviour
 
 
     private void Update() {
+
         inputDirection = new Vector2(Input.GetAxis(HorizontalAxisName),  Input.GetAxis(VerticallAxisName));
 
         animator.SetFloat(MoveForvard, inputDirection.y);
