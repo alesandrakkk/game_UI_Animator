@@ -20,7 +20,7 @@ public class ErikaMoveController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        //_dust = GetComponent<ParticleSystem>();
+       
     }
 
    
@@ -50,8 +50,12 @@ public class ErikaMoveController : MonoBehaviour
     {
         Debug.Log("Go");
 
-        Debug.Log("SoundON");
+        // Debug.Log("SoundON");
 
+        _audio.Play();
+        
         _dust.Play();
+       
+
     }
 }
