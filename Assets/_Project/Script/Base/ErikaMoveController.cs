@@ -50,7 +50,7 @@ public class ErikaMoveController : MonoBehaviour
     {
         Debug.Log("Go");
 
-        // Debug.Log("SoundON");
+         Debug.Log("SoundON");
 
         _audio.Play();
         
