@@ -20,31 +20,37 @@ public class ErikaMoveController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        //_dust = GetComponent<ParticleSystem>();
     }
 
+   
 
     private void Update()
     {
         _direction = new Vector2(Input.GetAxis(HorizontalAxis), Input.GetAxis(VerticalAxis));
-              
+            
+           
         animator.SetFloat(Movement, _direction.y);
         animator.SetFloat("Vertical", _direction.y);
         animator.SetFloat("Horizontal", _direction.x);
 
+        CelebrateWin();        
+    }
+
+    private void CelebrateWin()
+    {
         if (Input.GetKeyDown(KeyCode.C))
         {
             animator.SetBool(Celebrate, true);
         }
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            animator.SetBool(Celebrate, false);
-        }
-                
+        
     }
 
     private void PlaySoundAndDust()
     {
         Debug.Log("Go");
+
+        Debug.Log("SoundON");
 
         _dust.Play();
     }
