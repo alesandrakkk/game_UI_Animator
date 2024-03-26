@@ -8,6 +8,7 @@ public class MainMenuHendler : MonoBehaviour
     [SerializeField] MainMenu menuScreen;
 
     [SerializeField] BaseScreen  shopScreen;
+    [SerializeField] GameScreen gameScreen;
 
     void Start()
     {
@@ -18,6 +19,12 @@ public class MainMenuHendler : MonoBehaviour
         {
             menuScreen.CloseScreen();
             shopScreen.StartScreen();
+        });
+
+        menuScreen.PressGameButtom(() =>
+        {
+            menuScreen.CloseScreen();
+            gameScreen.StartScreen();
         });
     }
 

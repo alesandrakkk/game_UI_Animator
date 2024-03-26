@@ -44,4 +44,9 @@ public class MainMenu : BaseScreen
     {
         _shopButton.onClick.AddListener(() => onShopPressed?.Invoke());
     }
+
+    public void PressGameButtom(Action onGamePressed)
+    {
+        _gameButton.onClick.AddListener(() => onGamePressed?.Invoke());
+    }
 }
